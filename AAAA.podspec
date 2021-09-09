@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'vincent_zhong' => 'vincent_gemini@sina.com' }
-  s.source           = { :git => 'https://github.com/vincent_zhong/AAAA.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:vincentgemini/AAAA.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
@@ -33,6 +33,8 @@ TODO: Add long description of the pod here.
   s.source_files = 'AAAA/Classes/**/*'
   
   s.ios.vendored_frameworks = 'AAAA/Frameworks/*.framework'
+  
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
   # s.resource_bundles = {
   #   'AAAA' => ['AAAA/Assets/*.png']
